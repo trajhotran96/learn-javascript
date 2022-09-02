@@ -4,10 +4,11 @@
 console.log(petName)
 var petName = 'Bear'
 ```
-<b>A.</b> ReferenceError: petName is not defined
-<b>B.</b> Bear
-<b>C.</b> undefined
-<b>D.</b> ReferenceError: Cannot access 'petName' before initialization
+
+- A: `ReferenceError: petName is not defined`
+- B: `Bear`
+- C: `undefined`
+- D: ReferenceError: Cannot access 'petName' before initialization
 <details><summary><b>Answer</b></summary>
 C
 </details>
