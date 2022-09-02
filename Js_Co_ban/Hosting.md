@@ -87,7 +87,7 @@ console.log(result);
 Và kết quả sẽ là: `30`
 
 ## 4. Các ví dụ khác
-####a. Với biến có giá trị là 1 function
+#### a. Với biến có giá trị là 1 function
 VD: 
 ```javascript
 let x = 20,
