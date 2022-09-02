@@ -11,6 +11,7 @@ var petName = 'Bear'
 <details><summary><b>Answer</b></summary>
 C
 </details>
+
 ## 1. Hosting là gì?
 Hosting là tính năng lưu trữ của Javascript, tính năng này với `từng bối cảnh thực thi` sẽ đưa tất cả các `khai báo` lên đầu đoạn mã trước khi thực thi đoạn code.
 => Điều này giúp cho chươnng trình sẽ không bị lỗi việc sử dụng biến trước khi khai báo.
@@ -85,7 +86,7 @@ console.log(result);
 ```
 Và kết quả sẽ là: `30`
 
-##4. Các ví dụ khác
+## 4. Các ví dụ khác
 ####a. Với biến có giá trị là 1 function
 VD: 
 ```javascript
@@ -128,7 +129,7 @@ var add = (a, b) => { // Biến add = arrow function
 }
 ```
 
-####b. Hosting giữa các block
+#### b. Hosting giữa các block
 VD: ở đây sử dụng từ khoá let để phạm vi sử dụng là trong từng block 
 ```javascript
 let count = 10;
@@ -156,11 +157,8 @@ let count = 10;
 ```
 Kết quả sẽ là `ReferenceError: Cannot access 'count' before initialization`
 
-##5. Kết luận
+## 5. Kết luận
 Hosing về cơ bản sẽ là 1 tính năng không được hoàn hảo, vì đã phá vỡ nguyên tắc khi code là khai báo trước khi sử dụng. Tựu chung sẽ có 2 kết luận cá nhân:
 1. Với variable: Gần như vô nghĩa vì nguyên tắc code cần khai báo biến trước khi sử dụng và hosting đã phá vỡ nguyên tắc đó. Cái được duy nhất là sẽ không bị lỗi chưa khai báo biến nếu có khởi tạo giá trị bên dưới (Hay xảy ra trong code PHP)
 2. Với function thì sẽ khá hữu ích vì có thể đưa các khai báo function xuống cuối đoạn code để tránh việc lướt mãi mới đến đoạn code chính
 
-<b></b>
-```javascript
-```
