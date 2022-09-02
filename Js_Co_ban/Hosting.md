@@ -8,7 +8,7 @@ var petName = 'Bear'
 - A: `ReferenceError: petName is not defined`
 - B: `Bear`
 - C: `undefined`
-- D: ReferenceError: Cannot access 'petName' before initialization
+- D: `ReferenceError: Cannot access 'petName' before initialization`
 <details><summary><b>Answer</b></summary>
 C
 </details>
