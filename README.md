@@ -1,6 +1,6 @@
 # learn-javascript
 #### Từ khoá var, let và const
-- Bài viết về `var`, `let` và `const` có gì khác nhau?
+- [Bài viết về `var`, `let` và `const` có gì khác nhau?](https://github.com/trajhotran96/learn-javascript/blob/main/Js_Co_ban/var-let-const.md)
 #### Arrow function
 - Bài viết Arrow function
 #### Callback
