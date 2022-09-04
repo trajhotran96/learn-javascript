@@ -37,6 +37,7 @@ Phạm vi của biến `var`:
 - Các trường hợp khác, khi được khai báo thì biến `var` sẽ có phạm vi là `global`.
 
 Cùng đi vào ví dụ để hiểu hơn về `var` và vấn đề của `var`.
+
 <b> Trường hợp khai báo trong function để chứng minh phạm vi sử dụng biến `var` là `function scope`</b>
 VD:
 
@@ -48,6 +49,7 @@ function getName() {
 console.log(petName) // ReferenceError: petName is not defined
 ```
 Biến `var petName` được khai báo trong `function getName`. Phạm vi sử dụng `petName` sẽ là trong function => Dẫn đến `console.log(petName)` bên ngoài function sẽ lỗi chưa khai báo biến `petName`.
+
 <b>Trường hợp khai báo khác để chứng minh phạm vi sử dụng biến `var` là `global scope`</b>
 VD: 
 
@@ -81,7 +83,9 @@ Lý do ở đây là việc phạm vi sử dụng của `var` là `global`. Dẫ
 Để giải quyết vấn đề này thì ES6 bổ sung thêm `let` và `const`.
 ### b. Từ khóa `let`
 Một điều mà có thể khiến `let` hoặc `const` giải quyết được vấn đề trên của `var` đó là `phạm vi sử dụng là block`.
+
 <b>Chứng minh phạm vi biến là block scope</b>
+
 VD:
 
 ```javascript
@@ -135,10 +139,11 @@ Có 2 trường hợp khởi tạo giá trị của `const`:
 - Trường hợp `const` có kiểu dữ liệu là nguyên thủy (primitive) như: string, number, boolean, null, undefine. Thì sẽ `không thể tái khởi tạo giá trị hay cập nhật giá trị` được.
 - Trường hợp `const` có kiểu dữ liệu là tham chiếu (reference) như : object, array, function. Thì sẽ `cập nhật giá trị được`, còn `tái khởi tạo giá trị thì không`.
 
-##### Cùng đi vào ví dụ để làm rõ 2 trường hợp trên.
+#### Cùng đi vào ví dụ để làm rõ 2 trường hợp trên.
 
 <b>`const` có kiểu dữ liệu là nguyên thủy (primitive)</b>
-Cùng làm rõ `không thể tái khởi tạo giá trị hay cập nhật giá trị`
+
+Làm rõ `không thể tái khởi tạo giá trị hay cập nhật giá trị`
 
 VD: 
 ```javascript
@@ -186,4 +191,4 @@ Kết quả:
 
 `const` sẽ không thay đổi được giá trị của biến đó.
 - Đối với giá trị có kiểu dữ liệu là nguyên thủy (primitive) thì giá trị sẽ không thay đổi được là điều hiển nhiên. Vì đây là tính chất của `const`.
-- Còn đối với kiểu dữ liệu là tham chiếu (reference) đó là hệ quả của tính chất của từ khóa `const`. Như ta biết về tham chiếu (reference) thì giá trị của biến sẽ là địa chỉ của object/array/function. Thế nên ta `cập nhật giá trị` thì không ảnh hưởng gì đến địa chỉ nên giá trị `const` vẫn là không đổi. Còn khi `tái khởi tạo giá trị` thì javascript sẽ tạo object/array/function mới với địa chỉ mới. Sau đó gán giá trị địa chỉ mới vào biến `const`, lúc này thì sẽ gây lỗi.
+- Còn đối với kiểu dữ liệu là tham chiếu (reference) đó là hệ quả của tính chất của từ khóa `const`. Như ta biết về tham chiếu (reference) thì `giá trị của biến sẽ là địa chỉ` của object/array/function. Thế nên ta `cập nhật giá trị` thì không ảnh hưởng gì đến địa chỉ nên giá trị `const` vẫn là không đổi. Còn khi `tái khởi tạo giá trị` thì javascript sẽ tạo object/array/function mới với địa chỉ mới. Sau đó gán giá trị địa chỉ mới vào biến `const`, lúc này thì sẽ gây lỗi.
