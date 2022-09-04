@@ -10,8 +10,8 @@ console.log(petName)
 ```
 - A: `Monkey`
 - B: `Bear`
-- C: SyntaxError: Identifier 'petName' has already been declared
-- D: ReferenceError: Cannot access 'petName' before initialization
+- C: `SyntaxError: Identifier 'petName' has already been declared`
+- D: `ReferenceError: Cannot access 'petName' before initialization`
 <details><summary><b>Answer</b></summary>
 A: Monkey
 </details>
@@ -51,6 +51,7 @@ console.log(petName) // ReferenceError: petName is not defined
 Biến `var petName` được khai báo trong `function getName`. Phạm vi sử dụng `petName` sẽ là trong function => Dẫn đến `console.log(petName)` bên ngoài function sẽ lỗi chưa khai báo biến `petName`.
 
 <b>Trường hợp khai báo khác để chứng minh phạm vi sử dụng biến `var` là `global scope`</b>
+
 VD: 
 
 ```javascript
@@ -62,6 +63,7 @@ console.log(petName) // Bear
 Kết quả sẽ là `Bear` mặc dù `petName` được khai báo bên trong một block.
 
 <b>Sự vô tình trong code với `var`</b>
+
 Giả sử trong trường hợp code rất dài, và `vô tình` ta khởi tạo tên biến trong một block nào đó `trùng tên` với biến bên ngoài block. Điều gì sẽ xảy ra?
 VD: 
 
@@ -90,7 +92,7 @@ VD:
 
 ```javascript
 {
-    let petName = 'Bear' // sự vô tình
+    let petName = 'Bear'
 }
 console.log(petName) // ReferenceError: petName is not defined
 ```
@@ -110,16 +112,13 @@ Kết quả là : `Monkey`
 Vậy là khai báo trong block đã không còn làm ảnh hưởng đến biến trùng tên bên ngoài block. Ổn áp rồi.
 Điều này sẽ tương tự với `const`. Vậy nên đáp án của <b>`0. Câu hỏi`</b> sẽ là` A: Monkey`
 
-<b>Chú ý: </b> Cả `let` và `const` có thể cập nhật giá trị nhưng không thể tái khởi tạo tên biến đó.
+<b>Chú ý: </b> Cả `let` và `const` `có thể cập nhật giá trị` nhưng `không thể tái khởi tạo tên biến đó`.
 
 VD về `có thể cập nhật giá trị`:
 ```javascript
 let petName = 'Monkey'
 petName = 'Monkey2'
 console.log(petName) // Monkey2
-//--------------------------
-let petName = 'Bear' //SyntaxError: Identifier 'petName' has already been declared
-console.log(petName)
 ```
 Kết quả: `Monkey2`
 Đã được cập nhật giá trị
@@ -141,7 +140,7 @@ Có 2 trường hợp khởi tạo giá trị của `const`:
 
 #### Cùng đi vào ví dụ để làm rõ 2 trường hợp trên.
 
-<b>`const` có kiểu dữ liệu là nguyên thủy (primitive)</b>
+<b>- `const` có kiểu dữ liệu là nguyên thủy (primitive)</b>
 
 Làm rõ `không thể tái khởi tạo giá trị hay cập nhật giá trị`
 
@@ -153,7 +152,9 @@ console.log(petName)
 ```
 Kết quả có lỗi: `TypeError: Assignment to constant variable`.
 
-<b>`const` có kiểu dữ liệu là tham chiếu (reference)</b>
+Ở đây muốn tái khởi tạo giá trị `petName = 'Bear'` nhưng đã phát sinh lỗi.
+
+<b>- `const` có kiểu dữ liệu là tham chiếu (reference)</b>
 
 Cùng làm rõ `cập nhật giá trị được`, còn `tái khởi tạo giá trị thì không`.
 
